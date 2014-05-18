@@ -10,7 +10,12 @@ Gem::Specification.new do |gem|
   gem.email   = ['colinta@gmail.com']
   gem.summary     = %{Adds simple event methods to MotionKit::Layout classes.}
   gem.description = <<-DESC
+== Description
+
 Use +on+ and +trigger+ to send generic events from the layout to the controller.
+
+Sounds simple, but this enables a powerful method of keeping your UI logic
+contained in your Layout files.
 DESC
 
   gem.homepage    = 'https://github.com/rubymotion/motion-kit-events'
