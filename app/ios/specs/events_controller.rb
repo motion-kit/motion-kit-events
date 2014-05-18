@@ -11,7 +11,7 @@ class EventsController < UIViewController
     @layout = EventsLayout.new
     self.view = @layout.view
 
-    @test_button = @layout.get(:test)
+    @test_button = @layout.get(:test_button)
 
     @layout.on :test do
       @success = true
@@ -25,10 +25,10 @@ end
 class EventsLayout < MK::Layout
 
   def layout
-    add UIButton, :test
+    add UIButton, :test_button
   end
 
-  def test_style
+  def test_button_style
     title 'Test'
     frame :full
 
