@@ -8,7 +8,7 @@ GIT
 PATH
   remote: .
   specs:
-    motion-kit-events (0.2.1)
+    motion-kit-events (0.2.2)
       dbt
       motion-kit
 
