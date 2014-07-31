@@ -18,7 +18,7 @@ Sounds simple, but this enables a powerful method of keeping your UI logic
 contained in your Layout files.
 DESC
 
-  gem.homepage    = 'https://github.com/rubymotion/motion-kit-events'
+  gem.homepage    = 'https://github.com/motion-kit/motion-kit-events'
 
   gem.files       = Dir.glob('lib/**/*.rb')
   gem.files      << 'README.md'

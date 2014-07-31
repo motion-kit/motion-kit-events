@@ -110,7 +110,7 @@ end
 The sample app (most of the code is in [app/ios/login/][login]) includes a working
 version of this example.
 
-[login]: https://github.com/rubymotion/motion-kit-events/tree/master/app/ios/login/
+[login]: https://github.com/motion-kit/motion-kit-events/tree/master/app/ios/login/
 
 ###### Note
 
