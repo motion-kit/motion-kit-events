@@ -1,16 +1,12 @@
 class LoginController < UIViewController
 
   def loadView
-    @layout = LoginLayout.new
+    super
+    @layout = LoginLayout.new()
     self.view = @layout.view
 
     @layout.on :login do |username, password|
-      @layout.pause_ui
-      # send login info to the API (I would recommend using a separate class
-      # to handle the API conversation, e.g. a LoginStorage class).
-      storage.login(username, password) do |user, errors|
-        handle_login(user, errors)
-      end
+      handle_login(username, password)
     end
   end
 
@@ -18,14 +14,27 @@ class LoginController < UIViewController
     @storage ||= LoginStorage.new
   end
 
-  def handle_login(user, errors)
-    @layout.resume_ui
+  def handle_login(username, password)
+    @layout.pause_ui
+    # send login info to the API (I would recommend using a separate class
+    # to handle the API conversation, e.g. a LoginStorage class).
+    storage.login(username, password) do |user, errors|
+      @layout.resume_ui
 
-    if user
-      UIAlertView.alert('Success!')
-    elsif ! errors.empty?
-      UIAlertView.alert('Error', errors.first)
+      if user
+        handle_success
+      elsif ! errors.empty?
+        handle_error(errors)
+      end
     end
+  end
+
+  def handle_error(errors)
+    UIAlertView.alert('Error', errors.first)
+  end
+
+  def handle_success
+    UIAlertView.alert('Success!')
   end
 
 end

@@ -9,8 +9,8 @@ class LoginStorage
       errors << 'Invalid credentials'
     end
 
-    1.later do
-      handler.call(user, errors)
+    3.later do
+      handler.call(nil, errors)
     end
   end
 
