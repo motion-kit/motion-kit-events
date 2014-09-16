@@ -20,6 +20,10 @@ class EventsController < NSWindowController
     end
   end
 
+  def remove_events
+    @layout.off :test
+  end
+
 end
 
 

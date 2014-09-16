@@ -20,4 +20,17 @@ describe 'MotionKit::Events' do
     @controller.success.should == true
   end
 
+  context 'when the event is removed' do
+
+    it 'should not respond to the test button' do
+      @controller.remove_events
+      @controller.success.should.not == true
+      target = @controller.test_button.target
+      action = @controller.test_button.action
+      target.send(action)
+      @controller.success.should.not == true
+    end
+
+  end
+
 end
