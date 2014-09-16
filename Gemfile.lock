@@ -1,10 +1,3 @@
-GIT
-  remote: git@github.com:rubymotion/sugarcube
-  revision: f702070ebead126eef05666f68a41f6975ffefc2
-  branch: osx
-  specs:
-    sugarcube (2.0.0)
-
 PATH
   remote: .
   specs:
@@ -15,10 +8,11 @@ PATH
 GEM
   remote: https://rubygems.org/
   specs:
-    dbt (1.1.4)
-    motion-kit (0.9.6)
+    dbt (1.2.0)
+    motion-kit (0.10.1)
       dbt
     rake (10.3.2)
+    sugarcube (2.1.5)
 
 PLATFORMS
   ruby
@@ -27,4 +21,4 @@ DEPENDENCIES
   motion-kit
   motion-kit-events!
   rake
-  sugarcube!
+  sugarcube

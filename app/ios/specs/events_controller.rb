@@ -19,6 +19,10 @@ class EventsController < UIViewController
     end
   end
 
+  def remove_events
+    @layout.off :test
+  end
+
 end
 
 

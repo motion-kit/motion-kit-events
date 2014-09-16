@@ -21,6 +21,19 @@ module MotionKit
       end
     end
 
+    # Removes *all* event handlers for the specified event
+    def off(*args)
+      if @context || @assign_root
+        apply_with_target(:off, *args)
+      else
+        event = args.first
+        unless event
+          raise ArgumentError.new('`event` is a required argument to Layout#off')
+        end
+        motion_kit_event_handlers[event] = nil
+      end
+    end
+
     def trigger(*args, &handler)
       if @context
         apply(:trigger, *args, &handler)
