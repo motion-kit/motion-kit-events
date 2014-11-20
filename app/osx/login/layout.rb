@@ -40,9 +40,7 @@ class LoginLayout < MK::WindowLayout
       drawsBackground false
     end
 
-    initial do
-      stringValue 'Username'
-    end
+    stringValue 'Username'
 
     setTarget self
     setAction :next_input
@@ -70,9 +68,7 @@ class LoginLayout < MK::WindowLayout
       drawsBackground false
     end
 
-    initial do
-      stringValue 'Password'
-    end
+    stringValue 'Password'
 
     setTarget self
     setAction :submit
@@ -116,9 +112,7 @@ class LoginLayout < MK::WindowLayout
       drawsBackground false
     end
 
-    initial do
-      stringValue ''
-    end
+    stringValue ''
   end
 
   def status(value)
