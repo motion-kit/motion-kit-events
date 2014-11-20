@@ -47,7 +47,11 @@ module MotionKit
           params = args[1..-1]
           params = params[0] if params.size == 1
           motion_kit_event_handlers[event].each do |handler|
-            handler.call(params)
+            if handler.arity == 0
+              handler.call
+            else
+              handler.call(params)
+            end
           end
         end
 
