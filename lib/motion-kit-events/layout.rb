@@ -50,7 +50,7 @@ module MotionKit
             if handler.arity == 0
               handler.call
             else
-              handler.call(params)
+              handler.call(*params)
             end
           end
         end
